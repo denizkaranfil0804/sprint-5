@@ -1,4 +1,4 @@
-https://sprint-5-eta.vercel.app/
+[https://sprint-5-eta.vercel.app/](https://sprint-5-97eg.vercel.app/)
 
 # Kampüs Etkinlikleri - Sprint 5 (React Bileşen Mimarisi)
 **Ad Soyad:** Deniz Karanfil
