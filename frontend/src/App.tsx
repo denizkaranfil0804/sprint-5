@@ -20,8 +20,19 @@ function App() {
   const [category, setCategory] = useState<Category | "">("");
 
   const selected = selectedId ? findEventById(events, selectedId) : undefined;
-  const pageTitle = selected ? selected.title : "Kampüs Etkinlikleri";
+  
+  // Hangi sayfada veya detayda olduğumuza göre başlığı belirliyoruz
+  const pageTitle = selected 
+    ? selected.title 
+    : page === "events" 
+    ? "Tüm Etkinlikler" 
+    : page === "add" 
+    ? "Etkinlik Ekle" 
+    : page === "update" 
+    ? "Etkinlik Güncelle" 
+    : "Ana Sayfa";
 
+  // useEffect ile sekme başlığını dinamik olarak değiştiriyoruz (Adım 11)
   useEffect(() => {
     document.title = `Kampüs Etkinlikleri - ${pageTitle}`;
   }, [pageTitle]);
